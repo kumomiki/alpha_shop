@@ -10,7 +10,7 @@ export function InputGroups({label, placeholder, type, maxLength, id, className}
       type={type} 
       placeholder={placeholder} 
       maxLength={maxLength}
-      className={className}
+      // className={className}
       />
     </div>
   )

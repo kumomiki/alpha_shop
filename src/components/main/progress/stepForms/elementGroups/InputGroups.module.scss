@@ -1,7 +1,7 @@
 .inputGroupContainer{
   display: flex;
   flex-direction: column;
-  flex-basis: calc(100% - 18px);
+  width: 100%;
 
   .inputLabel{
     font-size: 12px;
@@ -10,7 +10,7 @@
 }
 
 :global(input){
-  width: 100%;
+  width: calc(100% - 18px);
   height: 40px;
   border: 1px solid #4A4A4A;
   border-radius: 4px;

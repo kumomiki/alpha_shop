@@ -1,0 +1,20 @@
+
+.StepThreeWrapper{
+  width: 346px;
+
+  .formRow{
+    margin-top: 24px;
+  }
+  .row{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+:global(.input_expiredDate){
+  width: calc(50% - 15px);
+}
+
+:global(.input_cvc){
+  width: calc(50% - 15px);
+}

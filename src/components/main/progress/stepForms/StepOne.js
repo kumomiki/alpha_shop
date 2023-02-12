@@ -162,7 +162,6 @@ export function StepOne() {
       placeholder='請輸入姓名'
       type='text'
       id='name'
-      className={styles.inputBorder}
       />
       </FormRow>
       <FormRow>
