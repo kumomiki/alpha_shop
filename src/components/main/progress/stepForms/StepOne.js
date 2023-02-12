@@ -1,6 +1,7 @@
 import { SelectGroups } from './elementGroups/SelectGroups.js'
 import { InputGroups } from './elementGroups/InputGroups.js'
 import styles from './StepOne.module.scss'
+import { Form } from './Form.js'
 
 const titleOptions = [
   {value:'mr.',
@@ -147,6 +148,8 @@ function FormRow({children}){
 
 export function StepOne() {
   return (
+    <Form 
+    title='寄送地址'>
     <div className={styles.StepOneWrapper}>
       <FormRow>
       <SelectGroups 
@@ -194,5 +197,6 @@ export function StepOne() {
       />
       </FormRow>
     </div>
+    </Form>
   );
 }
