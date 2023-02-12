@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { SelectGroups } from './components/main/progress/stepForms/elementGroups/SelectGroups';
+
+const titleOptions = [
+  {value:'mr.',
+   name:'先生'
+  },
+  {
+    value:'ms.',
+    name:'小姐'
+  },
+  {
+    value:'mx.',
+    name:'不明'
+  }
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SelectGroups 
+      label='稱謂'
+      options={titleOptions} />
     </div>
   );
 }

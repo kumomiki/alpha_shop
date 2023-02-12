@@ -1,0 +1,40 @@
+
+.selectGroupsContainer{
+  display: flex;
+  flex-direction: column;
+
+  .selectLabel{
+    font-size: 12px;
+    padding-bottom: 8px;
+  }
+
+  .selectWrapper{
+    width: 133px;
+    height: 40px;
+    position: relative;
+
+    .rectangle{
+      position:absolute;
+      right:16px;
+      top: 50%;
+      z-index: 1;
+    }
+
+    .selectItems{
+      height: 100%;
+      width: 100%;
+      font-size: 12px;
+      position: absolute;
+      padding-left: 16px;
+      z-index: 2;
+      background-color: transparent;
+
+      // customize
+      -webkit-appearance: none;
+      border-radius: 4px;
+    }
+
+
+
+  }
+}
