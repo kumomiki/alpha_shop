@@ -2,11 +2,11 @@ import styles from './SelectGroups.module.scss'
 import { ReactComponent as Rectangle } from '../../../../../icons/Rectangle.svg'
 
 
-export function SelectGroups({label, options}){
+export function SelectGroups({label, options, className}){
   return (
     <div className={styles.selectGroupsContainer}>
       <div className={styles.selectLabel}>{label}</div>
-      <div className={styles.selectWrapper}>
+      <div className={`${styles.selectWrapper} ${className}`}>
          <Rectangle className={styles.rectangle} />
          <select className={styles.selectItems} required>
           {options.map((option) => {
