@@ -1,0 +1,20 @@
+.inputGroupContainer{
+  display: flex;
+  flex-direction: column;
+
+  .inputLabel{
+    font-size: 12px;
+    padding-bottom: 8px;
+  }
+
+
+}
+
+:global(input){
+  width: 183px;
+  height: 40px;
+  -webkit-appearance: none;
+  border: 1px solid #4A4A4A;
+  border-radius: 4px;
+  padding-left: 16px;
+}

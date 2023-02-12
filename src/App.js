@@ -1,3 +1,4 @@
+import { InputGroups } from './components/main/progress/stepForms/elementGroups/InputGroups';
 import { SelectGroups } from './components/main/progress/stepForms/elementGroups/SelectGroups';
 
 const titleOptions = [
@@ -20,6 +21,11 @@ function App() {
       <SelectGroups 
       label='稱謂'
       options={titleOptions} />
+      <InputGroups 
+      label='姓名'
+      placeholder='請輸入姓名'
+      type='text'
+      />
     </div>
   );
 }
