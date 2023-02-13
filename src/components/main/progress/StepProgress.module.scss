@@ -1,0 +1,81 @@
+// basicProgressLine
+%progressIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #afb1bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%progressLine {
+  width: 60px;
+  height: 2px;
+  background-color: #afb1bd;
+  position: absolute;
+  top: 16px;
+}
+
+// StepProgress
+.stepProgressContainer {
+  width: 346px;
+  margin: 0 15px;
+
+  .stepProgressTitle{
+    font-weight: 700;
+  }
+
+  .stepProgressWrapper {
+    outline: 2px solid green;
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+    .progressIconGroups {
+      outline: 2px solid blue;
+
+      .progressIconDone {
+        @extend %progressIcon;
+        background-color: #2a2a2a;
+        border: 2px solid #2a2a2a;
+        color: #ffffff;
+
+        .progressIconText {
+          color: #ffffff;
+        }
+      }
+
+      .progressIconUndone {
+        @extend %progressIcon;
+        border: 2px solid #afb1bd;
+        background-color: #ffffff;
+
+        .progressIconText {
+          color: #afb1bd;
+        }
+      }
+    }
+
+    .leftProgressLine{
+      @extend %progressLine;
+      background-color: #2a2a2a;
+      left: calc(15% + 13px);
+    }
+    .rightProgressLine{
+      @extend %progressLine;
+      right: calc(15% + 13px);
+    }
+    .progressLineDone {
+      @extend %progressLine;
+      background-color: #2a2a2a;
+    }
+
+    .progressLineUndone {
+      @extend %progressLine;
+      background-color: #afb1bd;
+    }
+  }
+}
