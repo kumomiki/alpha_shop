@@ -5,7 +5,7 @@ function Step({step, currentStep}){
   return (
     <div className={styles.progressIconGroups}>
       <div class={currentStep >= step? styles.progressIconDone : styles.progressIconUndone}>
-        <div class={styles.progressIconText}>{currentStep >= step ? <Check />: step}</div>
+        <div class={styles.progressIconText}>{currentStep > step ? <Check />: step}</div>
       </div>
     </div>
   )

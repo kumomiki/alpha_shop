@@ -8,7 +8,9 @@ import { StepProgress } from "./components/main/progress/StepProgress.js";
 function App() {
   return (
     <div className="App">
-      <StepProgress/>
+      <StepProgress
+      currentStep={3}
+      />
       <StepOne />
       <StepTwo />
       <StepThree />
