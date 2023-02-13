@@ -1,15 +1,14 @@
-import { Cart } from "./components/main/cart/Cart.js";
-import { Progress } from "./components/main/Progress.js";
+import { Main } from "./components/Main.js";
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <Progress
+      <Main
       currentStep={3} 
       />
-      <Cart />
     </div>
   );
 }
