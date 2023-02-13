@@ -1,0 +1,58 @@
+%fontText {
+  font-size: 14px;
+  text-align: center;
+}
+
+%button {
+  height: 46px;
+  border-radius: 8px;
+  border-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btnContainer {
+  width: 346px;
+
+  .btnWrapper {
+    width: 100%;
+    margin: 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+    .btnPrev {
+      justify-content: flex-start;
+      @extend %button;
+      flex-basis: 55%;
+      background: #ffffff;
+      &:disabled {
+        display: none;
+      }
+
+      .btnText {
+        @extend %fontText;
+      }
+
+      .prevArrow {
+        padding-right: 13.5px;
+      }
+    }
+
+    .btnNext {
+      @extend %button;
+      background: #f67599;
+      flex-grow: 1;
+
+      .btnText {
+        @extend %fontText;
+        color: #ffffff;
+      }
+
+      .nextArrow {
+        padding-left: 13.5px;
+      }
+    }
+  }
+}

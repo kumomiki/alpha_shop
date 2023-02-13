@@ -1,3 +1,4 @@
+import { ProgressControl } from "./components/main/progress/ProgressControl.js";
 import { StepOne } from "./components/main/progress/stepForms/StepOne.js";
 import { StepThree } from "./components/main/progress/stepForms/StepThree.js";
 import { StepTwo } from "./components/main/progress/stepForms/StepTwo.js";
@@ -11,6 +12,9 @@ function App() {
       <StepOne />
       <StepTwo />
       <StepThree />
+      <ProgressControl 
+       currentStep={1}
+      />
     </div>
   );
 }
