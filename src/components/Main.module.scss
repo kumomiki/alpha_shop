@@ -1,4 +1,35 @@
-.MainContainer{
-  width: 375px;
+.MainContainer {
+  width: 100%;
   padding: 16px 0 40px 0;
+}
+
+@media screen and (min-width: 380px) {
+  .MainContainer {
+    // all: unset;
+    display: grid;
+    grid-template-columns: repeat(2, auto-fit);
+    grid-template-rows: repeat(3, auto-fit);
+    grid-template-areas:
+      "stepProgress . "
+      "stepForms cart"
+      "progressControl cart";
+
+    .stepProgress {
+      grid-area: stepProgress;
+      outline: 2px solid red;
+      width: 95%;
+    }
+
+    .stepForms {
+      grid-area: stepForms;
+    }
+
+    .cart {
+      grid-area: cart;
+    }
+
+    .progressControl {
+      grid-area: progressControl;
+    }
+  }
 }

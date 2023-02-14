@@ -11,6 +11,11 @@ function Step({step, currentStep}){
   )
 }
 
+function ProgressLabel({label, className}){
+  return (
+    <div className={`${styles.progressLabel} ${className}`}>{label}</div>
+  )
+}
 
 function ProgressLine({className}){
   return (
@@ -18,14 +23,18 @@ function ProgressLine({className}){
   )
 }
 
-export function StepProgress({currentStep}){
+export function StepProgress({currentStep, className}){
   return (
-    <section className={styles.stepProgressContainer}>
+    <section className={`${styles.stepProgressContainer} ${className}`}>
       <h2 className={styles.stepProgressTitle}>結帳</h2>
       <div className={styles.stepProgressWrapper}>
         <Step
         currentStep={currentStep}
         step={1}
+        />
+        <ProgressLabel 
+        label='寄送地址'
+        className={styles.labelHidden}
         />
         <ProgressLine 
         className={styles.leftProgressLine} 
@@ -34,11 +43,19 @@ export function StepProgress({currentStep}){
         currentStep={currentStep}
         step={2}
         />
+        <ProgressLabel 
+        label='運送方式'
+        className={styles.labelHidden}
+        />
         <ProgressLine className={`${currentStep >= 2 ? styles.progressLineDone : styles.progressIconUndone} ${styles.rightProgressLine}`}
         />
         <Step
         currentStep={currentStep}
         step={3}
+        />
+        <ProgressLabel 
+        label='付款資訊'
+        className={styles.labelHidden}
         />
       </div>
     </section>

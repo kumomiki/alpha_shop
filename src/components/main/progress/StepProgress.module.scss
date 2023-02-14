@@ -20,21 +20,18 @@
 
 // StepProgress
 .stepProgressContainer {
-  width: 346px;
   margin: 0 15px;
 
-  .stepProgressTitle{
+  .stepProgressTitle {
     font-weight: 700;
   }
 
   .stepProgressWrapper {
-    width: 100%;
     display: flex;
     position: relative;
     justify-content: space-between;
 
     .progressIconGroups {
-
       .progressIconDone {
         @extend %progressIcon;
         background-color: #2a2a2a;
@@ -57,12 +54,12 @@
       }
     }
 
-    .leftProgressLine{
+    .leftProgressLine {
       @extend %progressLine;
       background-color: #2a2a2a;
       left: calc(15% + 13px);
     }
-    .rightProgressLine{
+    .rightProgressLine {
       @extend %progressLine;
       right: calc(15% + 13px);
     }
@@ -74,6 +71,34 @@
     .progressLineUndone {
       @extend %progressLine;
       background-color: #afb1bd;
+    }
+
+    .labelHidden {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .stepProgressContainer {
+    width: 100%;
+    .stepProgressWrapper {
+      display: flex;
+      justify-content: space-between;
+
+      .labelHidden {
+        all: unset;
+        line-height: 32px;
+        margin-left: -150px;
+      }
+
+      .leftProgressLine {
+        left: calc(20% + 32px);
+      }
+
+      .rightProgressLine {
+        right: calc(20% + 32px);
+      }
     }
   }
 }
