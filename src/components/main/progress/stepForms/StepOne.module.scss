@@ -16,3 +16,15 @@
 
 }
 
+@media screen and (min-width: 380px) {
+  .stepOneContainer{
+    outline: 2px solid blue;
+
+
+    .StepOneWrapper{
+      all: unset;
+    }
+  }
+  
+}
+

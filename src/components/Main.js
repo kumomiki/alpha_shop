@@ -16,7 +16,7 @@ export function Main({currentStep}){
       currentStep={currentStep}
       />
       <div className={styles.stepForms}>
-      {currentStep === 1 && <StepOne /> }
+      {currentStep === 1 && <StepOne/> }
       {currentStep === 2 && <StepTwo /> }
       {currentStep === 3 && <StepThree />}
       </div>

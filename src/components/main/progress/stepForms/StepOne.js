@@ -149,7 +149,8 @@ function FormRow({children}){
 export function StepOne() {
   return (
     <Form 
-    title='寄送地址'>
+    title='寄送地址'
+    className={styles.stepOneContainer}>
     <div className={styles.StepOneWrapper}>
       <FormRow>
       <SelectGroups 

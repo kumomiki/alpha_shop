@@ -13,15 +13,20 @@
       "stepProgress . "
       "stepForms cart"
       "progressControl cart";
+    position: relative;
 
     .stepProgress {
       grid-area: stepProgress;
-      outline: 2px solid red;
       width: 95%;
     }
 
     .stepForms {
       grid-area: stepForms;
+      margin: 0 16px;
+      position: absolute;
+      top: -350px;
+      width: 95%;
+
     }
 
     .cart {
