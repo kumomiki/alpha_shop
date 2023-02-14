@@ -5,20 +5,18 @@ import { ReactComponent as Search } from "../icons/Search.svg";
 import { ReactComponent as ShoppingCart } from "../icons/ShoppingCart.svg";
 import { ReactComponent as Moon } from "../icons/Moon.svg";
 
-
-export function Header({handleHamburgerClick}) {
+export function Header({ handleHamburgerClick }) {
   return (
     <header class={styles.siteHeader}>
       <div class={styles.headerContainer}>
         <Hamburger className={styles.hamburger} />
         <Logo className={styles.logo} />
       </div>
-      <nav 
-      class={styles.navMenuContainer}
-      >
-        <ul 
-        className={`${styles.navMenuWrapper} ${styles.menuHidden}`}
-        disabled={handleHamburgerClick}>
+      <nav class={styles.navMenuContainer}>
+        <ul
+          className={`${styles.navMenuWrapper} ${styles.menuHidden}`}
+          disabled={handleHamburgerClick}
+        >
           <li class={styles.navItem}>
             <a class={styles.navLink} href="/">
               男款
@@ -46,9 +44,7 @@ export function Header({handleHamburgerClick}) {
           </li>
           <li class={styles.navIconList}>
             <Search />
-            <ShoppingCart 
-            className={styles.navShoppingCart}
-            />
+            <ShoppingCart className={styles.navShoppingCart} />
             <Moon />
           </li>
         </ul>

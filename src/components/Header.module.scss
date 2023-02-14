@@ -1,5 +1,5 @@
 .siteHeader {
-  width: 375px;
+  width: 100%;
   height: 56px;
 
   .headerContainer {
@@ -18,7 +18,7 @@
   }
 
   .navMenuContainer {
-    width: 375px;
+    width: 100%;
     height: 611px;
     position: relative;
 
@@ -54,8 +54,51 @@
         }
       }
     }
-    .menuHidden {
-      display: none;
+    // .menuHidden {
+    //   display: none;
+    // }
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .siteHeader {
+    width: 100%;
+    position: relative;
+
+    .headerContainer {
+      width: 100%;
+      margin: 0 auto;
+
+      .hamburger {
+        display: none;
+      }
+    }
+
+    .navMenuContainer {
+      all: unset;
+
+      .navMenuWrapper {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        margin: 0;
+        top: 0;
+        z-index: -1;
+
+        .navItem {
+          all: unset;
+          margin-right: 32px;
+        }
+
+        .navIconList {
+          all: unset;
+          display: flex;
+          align-self: center;
+          position: absolute;
+          right: 6.25%;
+        }
+      }
     }
   }
 }
