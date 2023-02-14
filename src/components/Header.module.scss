@@ -1,19 +1,58 @@
-.siteHeader{
+.siteHeader {
   width: 375px;
   height: 56px;
 
-  .headerContainer{
+  .headerContainer {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
 
-    .hamburger{
+    .hamburger {
       padding-left: 17px;
     }
 
-    .logo{
+    .logo {
       margin: 0 auto;
+    }
+  }
+
+  .navMenuContainer {
+    width: 375px;
+    height: 611px;
+    position: relative;
+
+    .navMenuWrapper {
+      width: 100%;
+      height: 100%;
+      margin-top: 16px;
+      padding: 0 14.5px;
+      position: absolute;
+      z-index: 10;
+      list-style: none;
+      background-color: #ffffff;
+
+      .navItem {
+        padding: 24px 0;
+        border-bottom: 1px solid rgba(42, 42, 42, 0.1);
+
+        .navLink {
+          font-size: 16px;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .navIconList {
+        padding-top: 25px;
+        display: flex;
+        justify-content: center;
+
+        .navShoppingCart {
+          margin: 0 45px;
+        }
+      }
     }
   }
 }
