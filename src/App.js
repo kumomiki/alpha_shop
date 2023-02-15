@@ -1,12 +1,13 @@
 import { Header } from "./components/Header.js";
 import { Main } from "./components/Main.js";
+import styles from './App.module.scss'
 
 
 
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.appContainer}>
       <Header />
       <Main
       currentStep={1} 
