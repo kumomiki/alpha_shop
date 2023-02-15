@@ -1,13 +1,11 @@
 .appContainer {
   outline: 2px solid red;
-  width: 100%;
   margin: 0 auto;
 }
 
-@media screen and (min-width: 380px) {
-  .appContainer {
-    outline: 2px solid red;
-    width: 80%;
-    margin: 0 auto;
-  }
-}
+// @media screen and (min-width: 380px) {
+//   .appContainer {
+//     outline: 2px solid red;
+//     width: 80%;
+//   }
+// }

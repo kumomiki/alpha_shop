@@ -60,49 +60,49 @@
   }
 }
 
-@media screen and (min-width: 380px) {
-  .siteHeader {
-    width: 100%;
-    position: relative;
+// @media screen and (min-width: 380px) {
+//   .siteHeader {
+//     width: 100%;
+//     position: relative;
 
-    .headerContainer {
-      width: 100%;
-      margin: 0 auto;
-      position: relative;
+//     .headerContainer {
+//       width: 100%;
+//       margin: 0 auto;
+//       position: relative;
 
-      .hamburger {
-        display: none;
-      }
-      .logo{
-        z-index: 99;
-      }
-    }
+//       .hamburger {
+//         display: none;
+//       }
+//       .logo{
+//         z-index: 99;
+//       }
+//     }
 
-    .navMenuContainer {
-      all: unset;
+//     .navMenuContainer {
+//       all: unset;
 
-      .navMenuWrapper {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        position: absolute;
-        margin: 0;
-        top: 0;
+//       .navMenuWrapper {
+//         height: 60px;
+//         display: flex;
+//         align-items: center;
+//         position: absolute;
+//         margin: 0;
+//         top: 0;
 
-        .navItem {
-          all: unset;
-          margin-right: 32px;
+//         .navItem {
+//           all: unset;
+//           margin-right: 32px;
 
-        }
+//         }
 
-        .navIconList {
-          all: unset;
-          display: flex;
-          align-self: center;
-          position: absolute;
-          right: 6.25%;
-        }
-      }
-    }
-  }
-}
+//         .navIconList {
+//           all: unset;
+//           display: flex;
+//           align-self: center;
+//           position: absolute;
+//           right: 6.25%;
+//         }
+//       }
+//     }
+//   }
+// }

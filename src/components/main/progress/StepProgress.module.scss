@@ -21,6 +21,7 @@
 // StepProgress
 .stepProgressContainer {
   margin: 0 15px;
+  width: 346px;
 
   .stepProgressTitle {
     font-weight: 700;
@@ -79,26 +80,26 @@
   }
 }
 
-@media screen and (min-width: 380px) {
-  .stepProgressContainer {
+// @media screen and (min-width: 380px) {
+//   .stepProgressContainer {
 
-    .stepProgressWrapper {
-      display: flex;
-      justify-content: space-between;
+//     .stepProgressWrapper {
+//       display: flex;
+//       justify-content: space-between;
 
-      .labelHidden {
-        all: unset;
-        line-height: 32px;
-        margin-left: -150px;
-      }
+//       .labelHidden {
+//         all: unset;
+//         line-height: 32px;
+//         margin-left: -150px;
+//       }
 
-      .leftProgressLine {
-        left: calc(20% + 32px);
-      }
+//       .leftProgressLine {
+//         left: calc(20% + 32px);
+//       }
 
-      .rightProgressLine {
-        right: calc(20% + 32px);
-      }
-    }
-  }
-}
+//       .rightProgressLine {
+//         right: calc(20% + 32px);
+//       }
+//     }
+//   }
+// }

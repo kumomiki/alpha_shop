@@ -1,44 +1,46 @@
 .MainContainer {
   width: 100%;
   padding: 16px 0 40px 0;
+
 }
 
-@media screen and (min-width: 380px) {
-  .MainContainer {
-    // all: unset;
-    display: grid;
-    grid-template-columns: repeat(2, auto-fit);
-    grid-template-rows: repeat(3, auto-fit);
-    grid-template-areas:
-      "stepProgress . "
-      "stepForms cart"
-      "progressControl cart";
-      gap: 134px;
-    position: relative;
+// @media screen and (min-width: 380px) {
+//   .MainContainer {
+//     // all: unset;
+//     display: grid;
+//     grid-template-columns: repeat(2, auto-fit);
+//     grid-template-rows: repeat(3, auto-fit);
+//     grid-template-areas:
+//       "stepProgress . "
+//       "stepForms cart"
+//       "progressControl cart";
+//       gap: 134px;
+//     position: relative;
 
-    .stepProgress {
-      height: 25%;
-      grid-area: stepProgress;
-    }
+//     .stepProgress {
+//       height: 25%;
+//       grid-area: stepProgress;
+//     }
 
-    .stepForms {
-      grid-area: stepForms;
-      margin: 0 16px;
-      // position: absolute;
-      // top: -350px;
-      // width: 95%;
+//     .stepForms {
+//       grid-area: stepForms;
+//       margin: 0 16px;
+//       // position: absolute;
+//       // top: -350px;
+//       // width: 95%;
 
-    }
+//     }
 
-    .cart {
-      grid-area: cart;
-    }
+//     .cart {
+//       grid-area: cart;
+//     }
 
-    .progressControl {
-      grid-area: progressControl;
-      outline: 2px solid green;
+//     .progressControl {
+//       grid-area: progressControl;
+//       width: 100%;
 
 
-    }
-  }
-}
+
+//     }
+//   }
+// }

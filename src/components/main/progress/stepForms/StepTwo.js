@@ -12,7 +12,8 @@ function FormRow({children, className}){
 export function StepTwo(){
   return (
     <Form
-    title='運送方式'>
+    title='運送方式'
+    >
       <FormRow>
         <RadioGroups 
         label='標準運送'

@@ -18,7 +18,7 @@
 
   .btnWrapper {
     width: 100%;
-    margin: 0 15px;
+    margin-left: 15px;
     display: flex;
     justify-content: space-between;
 
@@ -56,3 +56,21 @@
     }
   }
 }
+
+// @media screen and (min-width: 380px) {
+//   .btnContainer {
+//     all: unset;
+//     // outline: 2px solid blue;
+//   }
+//   .btnWrapper {
+//     outline: 2px solid green;
+//     width: 100%;
+//     margin-top: -40%;
+
+//     .btnNext {
+//       all: unset;
+//       outline: 2px solid red;
+//       margin-left: 300px;
+//     }
+//   }
+// }
