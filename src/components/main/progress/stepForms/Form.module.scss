@@ -1,9 +1,16 @@
-.formContainer{
-  width: 100%;
+.formContainer {
   height: 100%;
   padding: 24px 15px;
 
-  .formTitle{
+  .formTitle {
     font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .formContainer {
+    // all: unset;
+    padding: 0;
+    margin-top: -75%;
   }
 }
