@@ -23,9 +23,9 @@
     .stepForms {
       grid-area: stepForms;
       margin: 0 16px;
-      position: absolute;
-      top: -350px;
-      width: 95%;
+      // position: absolute;
+      // top: -350px;
+      // width: 95%;
 
     }
 
@@ -35,6 +35,9 @@
 
     .progressControl {
       grid-area: progressControl;
+      outline: 2px solid green;
+
+
     }
   }
 }

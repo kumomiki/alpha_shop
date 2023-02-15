@@ -1,30 +1,48 @@
-.StepOneWrapper{
+.StepOneWrapper {
   width: 346px;
 
-
   .formRow {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
 
-    .titleRow{
-      width: 80%;
-    }
   }
-
 }
+
 
 @media screen and (min-width: 380px) {
-  .stepOneContainer{
-    outline: 2px solid blue;
+  .stepOneContainer {
+    border-bottom: 1px solid #E6E6EB;
+    .StepOneWrapper {
+      width: 100%;
 
+      .formRowGrid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr;
+        width: 100%;
+        gap: 30px;
+        position: relative;
 
-    .StepOneWrapper{
-      all: unset;
+      }
+      .titleRow,
+      .select {
+        // width:100%;
+        grid-column: 1/3;
+      }
+
+      :global(.input_name),
+      :global(.input_address) {
+        grid-column: 3/7;
+      }
+      :global(.input_Email) {
+        grid-column: 4/7;
+      }
+
+      :global(.input_phoneNumber) {
+        grid-column: 1/4;
+      }
     }
   }
-  
 }
-

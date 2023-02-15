@@ -3,9 +3,9 @@ import {ReactComponent as PrevArrow } from '../../../icons/PrevArrow.svg'
 import {ReactComponent as NextArrow } from '../../../icons/NextArrow.svg'
 
 
-export function ProgressControl({ currentStep, phase, handleBtnPrevClick, handleBtnNextClick }) {
+export function ProgressControl({ currentStep, phase, handleBtnPrevClick, handleBtnNextClick, className }) {
   return (
-    <section class={styles.btnContainer} data-phase={phase}>
+    <section class={`${styles.btnContainer} ${className}`} data-phase={phase}>
       <div className={styles.btnWrapper}>
         <button 
         onClick={handleBtnPrevClick}

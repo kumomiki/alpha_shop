@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Main
-      currentStep={3} 
+      currentStep={1} 
       />
     </div>
   );

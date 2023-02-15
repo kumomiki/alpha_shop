@@ -140,9 +140,9 @@ const cityOptions = [
 ]
 
 // FormRow
-function FormRow({children}){
+function FormRow({children, className}){
   return (
-    <div className={styles.formRow}>{children}</div>
+    <div className={`${styles.formRow} ${className}`}>{children}</div>
   )
 }
 
@@ -152,7 +152,7 @@ export function StepOne() {
     title='寄送地址'
     className={styles.stepOneContainer}>
     <div className={styles.StepOneWrapper}>
-      <FormRow>
+      <FormRow className={styles.formRowGrid}>
       <SelectGroups 
       label='稱謂'
       options={titleOptions}
@@ -165,7 +165,7 @@ export function StepOne() {
       id='name'
       />
       </FormRow>
-      <FormRow>
+      <div className={styles.formRowGrid}>
       <InputGroups 
       label='電話'
       placeholder='請輸入行動電話'
@@ -173,29 +173,30 @@ export function StepOne() {
       id='phoneNumber'
       maxLength='10'
       />
-      </FormRow>
-      <FormRow>
+      {/* </FormRow>
+      <FormRow className={styles.formRowGrid}> */}
       <InputGroups 
       label='Email'
       placeholder='請輸入電子郵件'
       type='email'
       id='Email'
       />
-      </FormRow>
-      <FormRow>
+      </div>
+      <div className={styles.formRowGrid}>
       <SelectGroups 
       label='縣市'
       options={cityOptions}
+      className={styles.select}
       />
-      </FormRow>
-      <FormRow>
+      {/* </FormRow>
+      <FormRow className={styles.formRowGrid}> */}
       <InputGroups 
       label='地址'
       placeholder='請輸入地址'
       type='text'
       id='address'
       />
-      </FormRow>
+      </div>
     </div>
     </Form>
   );
