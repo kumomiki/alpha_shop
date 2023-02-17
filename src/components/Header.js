@@ -10,45 +10,44 @@ export function Header({ handleHamburgerClick }) {
     <header class={styles.siteHeader}>
       <div class={styles.headerContainer}>
         <Hamburger className={styles.hamburger} />
-        <Logo className={styles.logo} />
+        <a href="/" className={styles.logo}>
+          <Logo />
+        </a>
+        <nav class={`${styles.navMenuContainer} ${styles.menuHidden}`}>
+          <ul className={styles.navMenuWrapper} disabled={handleHamburgerClick}>
+            <li class={styles.navItem}>
+              <a class={styles.navLink} href="/">
+                男款
+              </a>
+            </li>
+            <li class={styles.navItem}>
+              <a class={styles.navLink} href="/">
+                女款
+              </a>
+            </li>
+            <li class={styles.navItem}>
+              <a class={styles.navLink} href="/">
+                最新消息
+              </a>
+            </li>
+            <li class={styles.navItem}>
+              <a class={styles.navLink} href="/">
+                客製商品
+              </a>
+            </li>
+            <li class={styles.navItem}>
+              <a class={styles.navLink} href="/">
+                聯絡我們
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class={`${styles.navIconList} ${styles.menuHidden}`}>
+          <Search />
+          <ShoppingCart className={styles.navShoppingCart} />
+          <Moon />
+        </div>
       </div>
-      <nav class={styles.navMenuContainer}>
-        <ul
-          className={`${styles.navMenuWrapper} ${styles.menuHidden}`}
-          disabled={handleHamburgerClick}
-        >
-          <li class={styles.navItem}>
-            <a class={styles.navLink} href="/">
-              男款
-            </a>
-          </li>
-          <li class={styles.navItem}>
-            <a class={styles.navLink} href="/">
-              女款
-            </a>
-          </li>
-          <li class={styles.navItem}>
-            <a class={styles.navLink} href="/">
-              最新消息
-            </a>
-          </li>
-          <li class={styles.navItem}>
-            <a class={styles.navLink} href="/">
-              客製商品
-            </a>
-          </li>
-          <li class={styles.navItem}>
-            <a class={styles.navLink} href="/">
-              聯絡我們
-            </a>
-          </li>
-          <li class={styles.navIconList}>
-            <Search />
-            <ShoppingCart className={styles.navShoppingCart} />
-            <Moon />
-          </li>
-        </ul>
-      </nav>
     </header>
   );
 }
