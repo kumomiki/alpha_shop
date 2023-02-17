@@ -74,32 +74,37 @@
       background-color: #afb1bd;
     }
 
-    .labelHidden {
-      display: none;
-    }
+    // .progressLabel {
+    //   display: none;
+    // }
   }
 }
 
-// @media screen and (min-width: 380px) {
-//   .stepProgressContainer {
+@media screen and (min-width: 380px) {
+  .stepProgressContainer {
+    width: 100%;
 
-//     .stepProgressWrapper {
-//       display: flex;
-//       justify-content: space-between;
+    .stepProgressWrapper {
+      padding: 0;
+      margin-right: 15px;
 
-//       .labelHidden {
-//         all: unset;
-//         line-height: 32px;
-//         margin-left: -150px;
-//       }
+      .stepLabelGroups {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-//       .leftProgressLine {
-//         left: calc(20% + 32px);
-//       }
+        .progressLabel {
+          margin-left: 8px;
+        }
+      }
 
-//       .rightProgressLine {
-//         right: calc(20% + 32px);
-//       }
-//     }
-//   }
-// }
+      .leftProgressLine {
+        left: 25%;
+      }
+
+      .rightProgressLine {
+        right: 25%;
+      }
+    }
+  }
+}
