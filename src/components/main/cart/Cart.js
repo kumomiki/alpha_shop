@@ -29,12 +29,14 @@ function ProductLists({ data }) {
     >
       <img class={styles.imgContainer} src={product.img} alt={product.name} />
       <div class={styles.productInfo}>
-        <div class={styles.productName}>{product.name}</div>
-        <div class={styles.productControlContainer}>
-          <div class={styles.productControl}>
-            <Minus />
-            <span class={styles.productCount}>{product.quantity}</span>
-            <Plus />
+        <div className={styles.productNameAndControl}>
+          <div class={styles.productName}>{product.name}</div>
+          <div class={styles.productControlContainer}>
+            <div class={styles.productControl}>
+              <Minus />
+              <span class={styles.productCount}>{product.quantity}</span>
+              <Plus />
+            </div>
           </div>
         </div>
         <div class={styles.productPrice}>${product.price}</div>
@@ -48,16 +50,17 @@ function ProductLists({ data }) {
 export function Cart() {
   return (
     <section className={styles.cartContainer}>
+      <h3 className={styles.cartTitle}>購物籃</h3>
       <ProductLists data={products} />
       <div className={styles.cartInfoWrapper}>
-      <div class={styles.cartInfoShipping}>
-        <div class={styles.cartText}>運費</div>
-        <div class={styles.cartPrice}>$待設定</div>
-      </div>
-      <div class={styles.cartInfoTotal}>
-        <div class={styles.cartText}>小計</div>
-        <div class={styles.cartPrice}>$待設定</div>
-      </div>
+        <div class={styles.cartInfoShipping}>
+          <div class={styles.cartText}>運費</div>
+          <div class={styles.cartPrice}>$待設定</div>
+        </div>
+        <div class={styles.cartInfoTotal}>
+          <div class={styles.cartText}>小計</div>
+          <div class={styles.cartPrice}>$待設定</div>
+        </div>
       </div>
     </section>
   );

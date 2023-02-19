@@ -17,13 +17,16 @@
     position: relative;
 
     .stepProgress {
+      outline: 2px solid red;
+      margin-top: 80px;
       height: 25%;
       grid-area: stepProgress;
     }
 
     .stepForms {
+      outline: 2px solid red;
       grid-area: stepForms;
-      margin: 0 16px;
+      margin: 64px 15px;
       position: absolute;
       top: -465px;
       width: 100%;
@@ -33,6 +36,7 @@
 
     .cart {
       grid-area: cart;
+      // width: 100%;
     }
 
     .progressControl {
