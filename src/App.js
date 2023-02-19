@@ -10,7 +10,7 @@ function App() {
     <div className={styles.appContainer}>
       <Header />
       <Main
-      currentStep={3} 
+      currentStep={2} 
       />
     </div>
   );

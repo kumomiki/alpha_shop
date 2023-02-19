@@ -1,4 +1,13 @@
-.formRow{
-  margin-top: 24px;
+.stepTwoWrapper {
+  width: 345px;
+
+  .formRow {
+    margin-top: 24px;
+  }
 }
 
+@media screen and (min-width: 380px) {
+  .stepTwoWrapper {
+    width: 435px;
+  }
+}
