@@ -35,12 +35,9 @@
 
     .cart {
       grid-area: cart;
-      // width: 100%;
     }
 
     .progressControl {
-      all: unset;
-      margin-left: 15px;
       grid-area: progressControl;
     }
   }
