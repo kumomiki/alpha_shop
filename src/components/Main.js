@@ -36,7 +36,7 @@ function handleBtnNextClick(){
       {currentStep === 3 && <StepThree />}
       </div>
       <Cart
-      className={styles.cart} 
+      className={styles.cart}
       />
       <ProgressControl
       className={styles.progressControl}

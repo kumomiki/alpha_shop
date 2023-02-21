@@ -1,6 +1,7 @@
 import styles from "./Cart.module.scss";
 import { ReactComponent as Minus } from "../../../icons/Minus.svg";
 import { ReactComponent as Plus } from "../../../icons/Plus.svg";
+import { useState } from "react";
 
 const products = [
   {
@@ -19,7 +20,7 @@ const products = [
   },
 ];
 
-function ProductLists({ data }) {
+function ProductLists({ data, onPlus, onMinus }) {
   const productItems = data.map((product) => (
     <div
       class={styles.productWrapper}
@@ -33,9 +34,11 @@ function ProductLists({ data }) {
           <div class={styles.productName}>{product.name}</div>
           <div class={styles.productControlContainer}>
             <div class={styles.productControl}>
-              <Minus />
+              <Minus className={styles.minus}
+              onClick={() => onMinus(product.id)} />
               <span class={styles.productCount}>{product.quantity}</span>
-              <Plus />
+              <Plus className={styles.plus} 
+              onClick={() => onPlus(product.id)} />
             </div>
           </div>
         </div>
@@ -48,10 +51,48 @@ function ProductLists({ data }) {
 }
 
 export function Cart() {
+  const [currentProducts, setCurrentProducts] = useState(products);
+
+  function handlePlusClick(id) {
+    setCurrentProducts(
+      currentProducts.map((product) => {
+        if (product.id === id) {
+          return {
+            ...product,
+            quantity: product.quantity + 1,
+          };
+        }else{
+          return product
+        }
+      })
+    );
+  }
+
+    function handleMinusClick(id) {
+      let nextProducts = currentProducts.map((product) => {
+        if (product.id === id) {
+          return {
+            ...product,
+            quantity: product.quantity - 1,
+          };
+        }else{
+          return product
+        }
+      })
+
+      nextProducts = nextProducts.filter((newProduct) => newProduct.quantity > 0);
+
+      setCurrentProducts(nextProducts)
+  }
+
   return (
     <section className={styles.cartContainer}>
       <h3 className={styles.cartTitle}>購物籃</h3>
-      <ProductLists data={products} />
+      <ProductLists
+        data={currentProducts}
+        onPlus={handlePlusClick}
+        onMinus={handleMinusClick}
+      />
       <div className={styles.cartInfoWrapper}>
         <div class={styles.cartInfoShipping}>
           <div class={styles.cartText}>運費</div>

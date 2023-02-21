@@ -55,6 +55,14 @@
           display: flex;
           justify-content: space-between;
 
+          .minus{
+            cursor: pointer;
+          }
+
+          .plus{
+            cursor: pointer;
+          }
+
           .productCount {
             display: block;
             line-height: 27px;
