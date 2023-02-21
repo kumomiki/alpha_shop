@@ -11,7 +11,6 @@ function App() {
     <div className={styles.appContainer}>
       <Header />
       <Main
-      currentStep={2} 
       />
       <Footer />
     </div>
