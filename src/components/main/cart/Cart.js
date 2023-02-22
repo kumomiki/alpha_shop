@@ -34,15 +34,21 @@ function ProductLists({ data, onPlus, onMinus }) {
           <div class={styles.productName}>{product.name}</div>
           <div class={styles.productControlContainer}>
             <div class={styles.productControl}>
-              <Minus className={styles.minus}
-              onClick={() => onMinus(product.id)} />
+              <Minus
+                className={styles.minus}
+                onClick={() => onMinus(product.id)}
+              />
               <span class={styles.productCount}>{product.quantity}</span>
-              <Plus className={styles.plus} 
-              onClick={() => onPlus(product.id)} />
+              <Plus
+                className={styles.plus}
+                onClick={() => onPlus(product.id)}
+              />
             </div>
           </div>
         </div>
-        <div class={styles.productPrice}>${product.price}</div>
+        <div
+          class={styles.productPrice}
+        >{`$ ${product.price.toLocaleString()}`}</div>
       </div>
     </div>
   ));
@@ -53,36 +59,46 @@ function ProductLists({ data, onPlus, onMinus }) {
 export function Cart() {
   const [currentProducts, setCurrentProducts] = useState(products);
 
+  const totalPrice = function isTotal() {
+    let total = 0;
+    currentProducts.map((product) => (total = total + product.price));
+    return total;
+  };
+
   function handlePlusClick(id) {
     setCurrentProducts(
       currentProducts.map((product) => {
         if (product.id === id) {
           return {
             ...product,
+            price:
+              product.id === "1" ? product.price + 50 : product.price + 200,
             quantity: product.quantity + 1,
           };
-        }else{
-          return product
+        } else {
+          return product;
         }
       })
     );
   }
 
-    function handleMinusClick(id) {
-      let nextProducts = currentProducts.map((product) => {
-        if (product.id === id) {
-          return {
-            ...product,
-            quantity: product.quantity - 1,
-          };
-        }else{
-          return product
-        }
-      })
+  function handleMinusClick(id) {
+    let nextProducts = currentProducts.map((product) => {
+      if (product.id === id && product.quantity !==0) {
+        return {
+          ...product,
+          price:
+              product.id === "1" ? product.price - 50 : product.price - 200,
+          quantity: product.quantity - 1,
+        };
+      } else {
+        return product;
+      }
+    });
 
-      nextProducts = nextProducts.filter((newProduct) => newProduct.quantity > 0);
+    nextProducts = nextProducts.filter((newProduct) => newProduct.quantity > 0);
 
-      setCurrentProducts(nextProducts)
+    setCurrentProducts(nextProducts);
   }
 
   return (
@@ -100,7 +116,7 @@ export function Cart() {
         </div>
         <div class={styles.cartInfoTotal}>
           <div class={styles.cartText}>小計</div>
-          <div class={styles.cartPrice}>$待設定</div>
+          <div class={styles.cartPrice}>${totalPrice()}</div>
         </div>
       </div>
     </section>
