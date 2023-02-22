@@ -5,23 +5,21 @@ import { StepOne } from './main/progress/stepForms/StepOne'
 import { StepThree } from './main/progress/stepForms/StepThree'
 import { StepTwo } from './main/progress/stepForms/StepTwo'
 import { StepProgress } from './main/progress/StepProgress'
-import { useState } from 'react'
 
 
-export function Main(){
-const [currentStep, setCurrentStep] = useState(1)
+export function Main({ currentStep, onBtnPrevClick,onBtnNextClick }){
 
-function handleBtnPrevClick(){
-  if(currentStep > 1){
-    setCurrentStep(currentStep - 1)
-  }
-}
+// function handleBtnPrevClick(){
+//   if(currentStep > 1){
+//     setCurrentStep(currentStep - 1)
+//   }
+// }
 
-function handleBtnNextClick(){
-  if(currentStep < 3){
-    setCurrentStep(currentStep + 1)
-  }
-}
+// function handleBtnNextClick(){
+//   if(currentStep < 3){
+//     setCurrentStep(currentStep + 1)
+//   }
+// }
 
 
   return (
@@ -41,8 +39,8 @@ function handleBtnNextClick(){
       <ProgressControl
       className={styles.progressControl}
       currentStep={currentStep} 
-      onBtnPrevClick={handleBtnPrevClick}
-      onBtnNextClick={handleBtnNextClick}
+      onBtnPrevClick={onBtnPrevClick}
+      onBtnNextClick={onBtnNextClick}
       />
     </section>
   )
