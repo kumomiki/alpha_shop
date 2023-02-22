@@ -83,8 +83,10 @@
     .btnWrapper {
       // all:unset;
       display: flex;
+      justify-content: flex-end;
       position: absolute;
       top: -150px;
+
 
       .btnNext {
         flex-grow: 0;

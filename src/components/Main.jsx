@@ -9,19 +9,6 @@ import { StepProgress } from './main/progress/StepProgress'
 
 export function Main({ currentStep, onBtnPrevClick,onBtnNextClick }){
 
-// function handleBtnPrevClick(){
-//   if(currentStep > 1){
-//     setCurrentStep(currentStep - 1)
-//   }
-// }
-
-// function handleBtnNextClick(){
-//   if(currentStep < 3){
-//     setCurrentStep(currentStep + 1)
-//   }
-// }
-
-
   return (
     <section className={styles.MainContainer}>
       <StepProgress
