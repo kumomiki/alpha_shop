@@ -1,7 +1,7 @@
-import { Header } from "./components/Header.js";
-import { Main } from "./components/Main.js";
+import { Header } from "./components/Header.jsx";
+import { Main } from "./components/Main.jsx";
 import styles from './App.module.scss'
-import { Footer } from "./components/Footer.js";
+import { Footer } from "./components/Footer.jsx";
 
 
 

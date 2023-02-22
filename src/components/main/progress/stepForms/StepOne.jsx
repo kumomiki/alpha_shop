@@ -1,7 +1,7 @@
-import { SelectGroups } from "./elementGroups/SelectGroups.js";
-import { InputGroups } from "./elementGroups/InputGroups.js";
+import { SelectGroups } from "./elementGroups/SelectGroups.jsx";
+import { InputGroups } from "./elementGroups/InputGroups.jsx";
 import styles from "./StepOne.module.scss";
-import { Form } from "./Form.js";
+import { Form } from "./Form.jsx";
 
 const titleOptions = [
   { value: "mr.", name: "先生" },
