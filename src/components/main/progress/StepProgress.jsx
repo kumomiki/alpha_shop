@@ -4,8 +4,8 @@ import { ReactComponent as Check} from '../../../icons/Check.svg'
 function Step({step, currentStep}){
   return (
     <div className={styles.progressIconGroups}>
-      <div class={currentStep >= step? styles.progressIconDone : styles.progressIconUndone}>
-        <div class={styles.progressIconText}>{currentStep > step ? <Check />: step}</div>
+      <div className={currentStep >= step? styles.progressIconDone : styles.progressIconUndone}>
+        <div class={styles.progressIconText}>{currentStep > step ? <Check className={styles.check}/>: step}</div>
       </div>
     </div>
   )
