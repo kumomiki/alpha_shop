@@ -4,10 +4,13 @@
 
 
   .radioGroup{
-    border: 1px solid #2A2A2A;
+    border: 1px solid #F0F0F5;
     border-radius: 4px;
     width: 100%;
     display: flex;
+    &:focus-within {
+      border-color: #2a2a2a;
+    }
     
     .shippingInfo{
       width: 100%;
@@ -38,6 +41,7 @@
 
 input[type='radio'] {
   -webkit-appearance: none;
+  border-color: #000000;
   width: 20px;
   height: 20px;
   border-radius: 50%;
