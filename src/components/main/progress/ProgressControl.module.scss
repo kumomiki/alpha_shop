@@ -61,19 +61,22 @@
 
 @media screen and (min-width: 380px) {
   .btnContainer {
-    width: 100%;
+    width: 510px;
     position: relative;
+    top: -15px;
+    margin-left: 15px;
 
     .btnWrapper {
-      // all:unset;
+      width: 100%;
+      margin: 0;
       display: flex;
       justify-content: flex-end;
       position: absolute;
-      top: -150px;
+      top: 0;
+
 
       .btnPrev{
         flex-grow: 1;
-        margin-left: 0;
       }
 
 

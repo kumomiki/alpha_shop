@@ -66,7 +66,8 @@
 
 @media screen and (min-width: 380px) {
   .siteHeader {
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
     height: 60px;
     .headerContainer {
       position: relative;

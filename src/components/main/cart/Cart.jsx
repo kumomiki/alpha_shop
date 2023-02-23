@@ -56,7 +56,7 @@ function ProductLists({ data, onPlus, onMinus }) {
   return <div className={styles.productContainer}>{productItems}</div>;
 }
 
-export function Cart() {
+export function Cart({className}) {
   const [currentProducts, setCurrentProducts] = useState(products);
 
   const totalPrice = function isTotal() {
@@ -102,7 +102,7 @@ export function Cart() {
   }
 
   return (
-    <section className={styles.cartContainer}>
+    <section className={`${className} ${styles.cartContainer}`}>
       <h3 className={styles.cartTitle}>購物籃</h3>
       <ProductLists
         data={currentProducts}
