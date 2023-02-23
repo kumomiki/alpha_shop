@@ -57,23 +57,7 @@
   }
 }
 
-// @media screen and (min-width: 380px) {
-//   .btnContainer {
-//     all: unset;
-//     // outline: 2px solid blue;
-//   }
-//   .btnWrapper {
-//     outline: 2px solid green;
-//     width: 100%;
-//     margin-top: -40%;
 
-//     .btnNext {
-//       all: unset;
-//       outline: 2px solid red;
-//       margin-left: 300px;
-//     }
-//   }
-// }
 
 @media screen and (min-width: 380px) {
   .btnContainer {
@@ -87,10 +71,16 @@
       position: absolute;
       top: -150px;
 
+      .btnPrev{
+        flex-grow: 1;
+        margin-left: 0;
+      }
+
 
       .btnNext {
         flex-grow: 0;
         width: 147px;
+
       }
     }
   }
