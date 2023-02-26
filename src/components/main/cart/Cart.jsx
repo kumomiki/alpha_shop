@@ -1,24 +1,26 @@
 import styles from "./Cart.module.scss";
 import { ReactComponent as Minus } from "../../../icons/Minus.svg";
 import { ReactComponent as Plus } from "../../../icons/Plus.svg";
-import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "./CartContext.js";
 
-const products = [
-  {
-    id: "1",
-    name: "貓咪罐罐",
-    img: "https://picsum.photos/300/300?text=1",
-    price: 100,
-    quantity: 2,
-  },
-  {
-    id: "2",
-    name: "貓咪干干",
-    img: "https://picsum.photos/300/300?text=2",
-    price: 200,
-    quantity: 1,
-  },
-];
+// const products = [
+//   {
+//     id: "1",
+//     name: "貓咪罐罐",
+//     img: "https://picsum.photos/300/300?text=1",
+//     price: 100,
+//     quantity: 2,
+//   },
+//   {
+//     id: "2",
+//     name: "貓咪干干",
+//     img: "https://picsum.photos/300/300?text=2",
+//     price: 200,
+//     quantity: 1,
+//   },
+// ];
+
 
 function ProductLists({ data, onPlus, onMinus }) {
   const productItems = data.map((product) => (
@@ -56,14 +58,8 @@ function ProductLists({ data, onPlus, onMinus }) {
   return <div className={styles.productContainer}>{productItems}</div>;
 }
 
-export function Cart({className}) {
-  const [currentProducts, setCurrentProducts] = useState(products);
-
-  const totalPrice = function isTotal() {
-    let total = 0;
-    currentProducts.map((product) => (total = total + product.price));
-    return total;
-  };
+export function Cart({ className }) {
+  const {currentProducts, setCurrentProducts, totalPrice} = useContext(CartContext);
 
   function handlePlusClick(id) {
     setCurrentProducts(
@@ -84,11 +80,10 @@ export function Cart({className}) {
 
   function handleMinusClick(id) {
     let nextProducts = currentProducts.map((product) => {
-      if (product.id === id && product.quantity !==0) {
+      if (product.id === id && product.quantity !== 0) {
         return {
           ...product,
-          price:
-              product.id === "1" ? product.price - 50 : product.price - 200,
+          price: product.id === "1" ? product.price - 50 : product.price - 200,
           quantity: product.quantity - 1,
         };
       } else {

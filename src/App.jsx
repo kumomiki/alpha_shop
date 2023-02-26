@@ -3,6 +3,7 @@ import { Main } from "./components/Main.jsx";
 import styles from './App.module.scss'
 import { Footer } from "./components/Footer.jsx";
 import { useState } from 'react'
+import { CartContextProvider } from "./components/main/cart/CartContext.js";
 
 
 
@@ -23,15 +24,17 @@ function handleBtnNextClick(){
 }
 
   return (
-    <div className={styles.appContainer}>
-      <Header />
-      <Main
-      currentStep={currentStep} 
-      onBtnPrevClick={handleBtnPrevClick}
-      onBtnNextClick={handleBtnNextClick}
-      />
-      <Footer />
-    </div>
+    <CartContextProvider>
+      <div className={styles.appContainer}>
+        <Header />
+        <Main
+          currentStep={currentStep}
+          onBtnPrevClick={handleBtnPrevClick}
+          onBtnNextClick={handleBtnNextClick}
+        />
+        <Footer />
+      </div>
+    </CartContextProvider>
   );
 }
 
