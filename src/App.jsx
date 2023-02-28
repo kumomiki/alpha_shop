@@ -3,17 +3,16 @@ import { Main } from "./components/Main.jsx";
 import styles from "./App.module.scss";
 import { Footer } from "./components/Footer.jsx";
 import { useContext, useState } from "react";
+import { CartContext } from "./components/main/cart/CartContext.js";
 import {
-  CartContext,
-  CartContextProvider
-} from "./components/main/cart/CartContext.js";
-import { FormContext, FormContextProvider } from "./components/main/progress/FormContext.js";
+  FormContext,
+  FormContextProvider,
+} from "./components/main/progress/FormContext.js";
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
   const { totalPrice } = useContext(CartContext);
-  const { paymentInfo } =useContext(FormContext)
-
+  const { paymentInfo } = useContext(FormContext);
 
   function handleBtnPrevClick() {
     if (currentStep > 1) {
@@ -27,7 +26,7 @@ function App() {
     }
     if (currentStep === 3) {
       console.log(`小計: ${totalPrice()}`);
-      console.log(`付款資訊: ${paymentInfo}`)
+      console.log(`付款資訊: ${paymentInfo}`);
     }
   }
 
@@ -35,13 +34,11 @@ function App() {
     <div className={styles.appContainer}>
       <Header />
       <FormContextProvider>
-        <CartContextProvider>
-          <Main
-            currentStep={currentStep}
-            onBtnPrevClick={handleBtnPrevClick}
-            onBtnNextClick={handleBtnNextClick}
-          />
-        </CartContextProvider>
+        <Main
+          currentStep={currentStep}
+          onBtnPrevClick={handleBtnPrevClick}
+          onBtnNextClick={handleBtnNextClick}
+        />
       </FormContextProvider>
       <Footer />
     </div>
