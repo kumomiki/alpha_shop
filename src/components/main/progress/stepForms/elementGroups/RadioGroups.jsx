@@ -4,7 +4,7 @@ export function RadioGroups({label, fee, price, period, id}){
   return (
     <div className={styles.radioContainer}>
       <label className={styles.radioGroup} data-price={fee}>
-        <input id={id} type="radio" name="shipping" checked />
+        <input id={id} type="radio" name="shipping" defaultChecked />
         <div className={styles.shippingInfo}>
           <div className={styles.shippingFeeInfo}>
             <div className={styles.text}>{label}</div>
