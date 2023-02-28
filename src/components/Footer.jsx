@@ -22,7 +22,7 @@ const items = [
 
 function FooterItems({ data }) {
   const footerItems = data.map((item) => (
-    <div className={styles.itemsWrapper}>
+    <div className={styles.itemsWrapper} key={item.title}>
       <h2 className={styles.itemsTitle}>{item.title}</h2>
       <div className={styles.items} key={item.lists}>
         {item.lists.map((listItem) => (
