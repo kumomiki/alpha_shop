@@ -7,42 +7,42 @@ import { ReactComponent as Moon } from "../icons/Moon.svg";
 
 export function Header({ handleHamburgerClick }) {
   return (
-    <header class={styles.siteHeader}>
-      <div class={styles.headerContainer}>
+    <header className={styles.siteHeader}>
+      <div className={styles.headerContainer}>
         <Hamburger className={styles.hamburger} />
         <a href="/" className={styles.logo}>
           <Logo />
         </a>
-        <nav class={`${styles.navMenuContainer} ${styles.menuHidden}`}>
+        <nav className={`${styles.navMenuContainer} ${styles.menuHidden}`}>
           <ul className={styles.navMenuWrapper} disabled={handleHamburgerClick}>
-            <li class={styles.navItem}>
-              <a class={styles.navLink} href="/">
+            <li className={styles.navItem}>
+              <a className={styles.navLink} href="/">
                 男款
               </a>
             </li>
-            <li class={styles.navItem}>
-              <a class={styles.navLink} href="/">
+            <li className={styles.navItem}>
+              <a className={styles.navLink} href="/">
                 女款
               </a>
             </li>
-            <li class={styles.navItem}>
-              <a class={styles.navLink} href="/">
+            <li className={styles.navItem}>
+              <a className={styles.navLink} href="/">
                 最新消息
               </a>
             </li>
-            <li class={styles.navItem}>
-              <a class={styles.navLink} href="/">
+            <li className={styles.navItem}>
+              <a className={styles.navLink} href="/">
                 客製商品
               </a>
             </li>
-            <li class={styles.navItem}>
-              <a class={styles.navLink} href="/">
+            <li className={styles.navItem}>
+              <a className={styles.navLink} href="/">
                 聯絡我們
               </a>
             </li>
           </ul>
         </nav>
-        <div class={`${styles.navIconList} ${styles.menuHidden}`}>
+        <div className={`${styles.navIconList} ${styles.menuHidden}`}>
           <Search />
           <ShoppingCart className={styles.navShoppingCart} />
           <Moon />

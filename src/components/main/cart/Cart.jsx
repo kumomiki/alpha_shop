@@ -25,22 +25,26 @@ import { CartContext } from "./CartContext.js";
 function ProductLists({ data, onPlus, onMinus }) {
   const productItems = data.map((product) => (
     <div
-      class={styles.productWrapper}
+      className={styles.productWrapper}
       data-count={product.quantity}
       data-price={product.price}
       key={product.id}
     >
-      <img class={styles.imgContainer} src={product.img} alt={product.name} />
-      <div class={styles.productInfo}>
+      <img
+        className={styles.imgContainer}
+        src={product.img}
+        alt={product.name}
+      />
+      <div className={styles.productInfo}>
         <div className={styles.productNameAndControl}>
-          <div class={styles.productName}>{product.name}</div>
-          <div class={styles.productControlContainer}>
-            <div class={styles.productControl}>
+          <div className={styles.productName}>{product.name}</div>
+          <div className={styles.productControlContainer}>
+            <div className={styles.productControl}>
               <Minus
                 className={styles.minus}
                 onClick={() => onMinus(product.id)}
               />
-              <span class={styles.productCount}>{product.quantity}</span>
+              <span className={styles.productCount}>{product.quantity}</span>
               <Plus
                 className={styles.plus}
                 onClick={() => onPlus(product.id)}
@@ -49,7 +53,7 @@ function ProductLists({ data, onPlus, onMinus }) {
           </div>
         </div>
         <div
-          class={styles.productPrice}
+          className={styles.productPrice}
         >{`$ ${product.price.toLocaleString()}`}</div>
       </div>
     </div>
@@ -105,13 +109,13 @@ export function Cart({ className }) {
         onMinus={handleMinusClick}
       />
       <div className={styles.cartInfoWrapper}>
-        <div class={styles.cartInfoShipping}>
-          <div class={styles.cartText}>運費</div>
-          <div class={styles.cartPrice}>$待設定</div>
+        <div className={styles.cartInfoShipping}>
+          <div className={styles.cartText}>運費</div>
+          <div className={styles.cartPrice}>$待設定</div>
         </div>
-        <div class={styles.cartInfoTotal}>
-          <div class={styles.cartText}>小計</div>
-          <div class={styles.cartPrice}>${totalPrice()}</div>
+        <div className={styles.cartInfoTotal}>
+          <div className={styles.cartText}>小計</div>
+          <div className={styles.cartPrice}>${totalPrice()}</div>
         </div>
       </div>
     </section>
